@@ -15,7 +15,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Build files...
-      - yarn clean
+      - yarn autoclean
       - yarn build
   build:
     commands:
